@@ -1,0 +1,2 @@
+,index,target_name,target_accession,query_name,query_accession,eval_full_seq,score_full_seq,bias_full_seq,e_val_best_dom,score_best_dom,bias_best_dom,exp,reg,clu,ov,env,dom,rep,inc,target_description,sample_names,contig_id,gene_id
+4617,867,China.pigfarm.SRR5976187_ctg_99667_00003,-,ClassC-AmpC,RF0055,2.1e-11,45.4,0.3,6.6e-11,43.7,0.2,1.8,2,0,0,2,2,2,1,Beta-hexosaminidase      ,China.pigfarm.SRR5976187,ctg_99667,3

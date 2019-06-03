@@ -1,0 +1,62 @@
+הי,
+
+
+בדקתי את הקוד על הקובץ שהעברת והוא עובד תקין.
+
+אני מצרף קובץ פייתון שמכיל מחלקה עם כל הפונק׳ הרלוונטיות‫. הקוד מסוגל להתמודד עם נתיב כניסה שמכיל קבצים שונים, מתוכם הוא יבחר רק קבצים עם סיומת שמוגדרת לו ויעבד אותם על פי התנאים שהגדרנו במעלה הדרך..‬
+
+למרבית הפונק׳ יש תיעוד, לא לכולן סיימתי תיעוד מפורט אבל עבורך עקרונית זה אמור להיות שקוף.‫ לפונק׳ המרכזית (הראפר, יש תיעוד).‬
+
+כדי לעבד קבצים חדשים יש להשתמש בתבנית הבאה:
+
+‪In iTerm: ‬
+
+
+‪	‬
+‪$module load ... #Load a python module, preferably a anaconda module of version 3+ 	‬
+‪$ipython #Activate python module:‬
+
+‪#set input folder path ‬
+‪# '>>>' indicates python‬
+‪#import code file and code class‬
+
+‪>>> from process_hmm_tblout import process_hmm asp hmm‬
+‪>>> input_path = '...where all tblout files are'‬
+‪>>> output_path = '...Where you want output files to go to'‬
+‪>>> suffix = '...suffix of input files (the output of your hmmsearch files, that's optional default is 'hmmertbl'‬
+
+‪#run wrapper function‬
+‪>>> hmm.process(input_path, output_path, suffix)‬
+
+‪#it is also possible to provide a different distance between known genes (n values) , like that :‬
+‪>>> hmm.process(input_path, output_path, suffix, n)‬
+
+‪#function should return zero if all goes well‬
+
+‪#To see documentation of wrapper function (or of another function inside):‬
+‪>>>help(phmm.process)‬
+
+
+
+
+‪תוצאות ההרצה אמורות להכיל 3 קבצים משלבים שונים של הריצה ‬
+
+‪df_filtered_{YYYY}_{MM}_{DD} -> a csv file containing a row of the best hit for each gene, after removing contigs that have only 1 gene‬
+
+‪final_df_{YYYY}_{MM}_{DD}_n{value of n} -> a csv file containing a row for each 'cassette' of interesting genes, columns are as we discussed + some columns I used for further processing.‬
+
+‪unknown_genes_ids_{YYYY}_{MM}_{DD} -> a csv file with a row for each unknown gene. this file should be valid for later use with pullseq‬
+
+
+‫דברים שעדיין חסרים ורלוונטיים לעכשיו:‬
+‫* אי אפשר להריץ עם כתובות ריקות, כלומר אי אפשר לקרוא לפונק׳ שכותבת את כל הקבצים ללא פרמטרים, צריך להעביר נתיב מלא של תיקיית קבצי הקלט ושל תיקיית קבצי הפלט‬
+‫* כמובן שיש מלא באגים שלא גיליתי כנראה ויתגלו על הדרך.‬
+‫* כרגע השוליים של ה׳קסטות׳ מוגדרים כ1, עוד לא הרכבתי לזה שליטה על ידי המשתמש.‬
+
+
+
+‫זהו, מקווה שזה יעבוד כמו שצריך.. ‬
+‫דרור‬
+
+
+
